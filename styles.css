@@ -1,0 +1,116 @@
+/* styles.css */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: linear-gradient(135deg, #eef2f3, #8e9eab);
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  background: #2c3e50;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 1rem 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 1rem;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #f39c12;
+}
+
+/* Sections */
+section {
+  padding: 4rem 1rem;
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
+}
+
+section:nth-of-type(odd) {
+  background: #f5f5f5;
+}
+
+h1,
+h2 {
+  font-family: "Merriweather", serif;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+/* Cards for Portfolio and Skills */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 250px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #2c3e50;
+  color: white;
+}
+
+footer a {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #2c3e50;
+  color: #f5f5f5;
+}
+
+body.dark section:nth-of-type(odd) {
+  background: #34495e;
+}
+
+body.dark footer {
+  background: #34495e;
+}
