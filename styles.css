@@ -1,29 +1,32 @@
-/* styles.css */
-body {
-  font-family: "Roboto", Arial, sans-serif;
+/* General Reset */
+* {
   margin: 0;
   padding: 0;
-  color: #333;
-  background: linear-gradient(135deg, #eef2f3, #8e9eab);
-  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
-/* Header */
+body {
+  font-family: "Poppins", sans-serif;
+  color: #444;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  line-height: 1.6;
+}
+
+/* Header Styles */
 header {
   background: #2c3e50;
   color: white;
+  padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 10;
-  padding: 1rem 0;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  padding: 0;
 }
 
 header nav ul li {
@@ -41,11 +44,44 @@ header nav ul li a:hover {
   color: #f39c12;
 }
 
-/* Sections */
+/* Hero Section */
+.hero {
+  text-align: center;
+  color: white;
+  padding: 8rem 1rem;
+  background: url("https://via.placeholder.com/1200x800") center/cover no-repeat;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#cta-btn {
+  padding: 0.75rem 1.5rem;
+  background: #f39c12;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#cta-btn:hover {
+  background: #e67e22;
+}
+
+/* Section Styling */
 section {
-  padding: 4rem 1rem;
+  padding: 4rem 2rem;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1200px;
   text-align: center;
 }
 
@@ -53,44 +89,104 @@ section:nth-of-type(odd) {
   background: #f5f5f5;
 }
 
-h1,
 h2 {
-  font-family: "Merriweather", serif;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 p {
-  margin: 1rem 0;
+  margin-bottom: 1.5rem;
   font-size: 1.2rem;
 }
 
-/* Cards for Portfolio and Skills */
+/* Card Container */
 .card-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 2rem;
   justify-content: center;
-  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .card {
   background: white;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  width: 250px;
-  text-align: left;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 280px;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.card p {
+  padding: 0 1rem 1rem;
+  font-size: 1rem;
+  color: #666;
 }
 
 .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Skills Icons */
+.card i {
+  font-size: 3rem;
+  color: #f39c12;
+  margin: 1rem 0;
+}
+
+/* Contact Form */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form button {
+  background: #f39c12;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #e67e22;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
   background: #2c3e50;
   color: white;
 }
@@ -101,16 +197,91 @@ footer a {
   font-weight: bold;
 }
 
-/* Dark Mode */
-body.dark {
-  background: #2c3e50;
-  color: #f5f5f5;
+footer a:hover {
+  color: #e67e22;
 }
 
-body.dark section:nth-of-type(odd) {
-  background: #34495e;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .card-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card {
+    width: 100%;
+  }
 }
 
-body.dark footer {
-  background: #34495e;
+/* Scroll Animation */
+.scrolled {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card,
+h2,
+p,
+img {
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  width: 80%;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #444;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

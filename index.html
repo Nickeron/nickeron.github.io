@@ -3,14 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Nikolaos Karamousadakis</title>
+    <title>Nikolaos Karamousadakis Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
-
   <body>
     <header>
-      <nav aria-label="Main Navigation">
-        <ul class="navbar">
+      <nav aria-label="Main navigation">
+        <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
@@ -22,89 +25,108 @@
     </header>
 
     <main>
-      <section id="home" tabindex="-1">
-        <h1>Nikolaos Karamousadakis</h1>
-        <p>Aspiring developer delivering quality code across domains.</p>
+      <!-- Home Section -->
+      <section id="home" aria-labelledby="home-title">
+        <div class="hero">
+          <h1 id="home-title">Nikolaos Karamousadakis</h1>
+          <p>Full Stack Developer | Game Developer</p>
+          <button id="cta-btn">See My Work</button>
+        </div>
       </section>
 
-      <section id="about" tabindex="-1">
-        <h2>About Me</h2>
+      <!-- About Section -->
+      <section id="about" aria-labelledby="about-title">
+        <h2 id="about-title">About Me</h2>
         <p>
-          I am an experienced developer skilled in programming languages like
-          Java, C++, Python, and C#. With a passion for delivering high-quality
-          code, I specialize in game development, full-stack solutions, and
-          innovative projects.
+          I'm a passionate developer with a strong focus on creating engaging
+          games and innovative applications. With expertise in languages like
+          <strong>C#</strong>, <strong>Python</strong>, and
+          <strong>JavaScript</strong>, I aim to craft solutions that balance
+          functionality and creativity.
         </p>
+        <img src="https://via.placeholder.com/300" alt="Nikolaos Working" />
       </section>
 
-      <section id="portfolio" tabindex="-1">
-        <h2>Portfolio</h2>
-        <ul>
-          <li><strong>Matter of Chemistry</strong>: Short film, 2020–2022</li>
-          <li>
-            <strong>Storyboard</strong>: Social network developed during coding
-            bootcamp
-          </li>
-          <li>
-            <strong>Tower Defense Game</strong>: Designed and programmed from
-            scratch
-          </li>
-        </ul>
-      </section>
-
-      <section id="experience" tabindex="-1">
-        <h2>Experience</h2>
-        <div>
-          <h3>MatchWornShirt</h3>
-          <p>
-            <strong>Role:</strong> Full Stack Developer (C#, Vue) | Feb 2022 –
-            Aug 2023
-          </p>
-          <ul>
-            <li>Developed backend solutions in .NET and EF Core 8.</li>
-            <li>Resolved bugs using Sentry and Grafana.</li>
-            <li>Built frontend features using Vue.js.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Abzorba Games Mbh</h3>
-          <p><strong>Role:</strong> Unity Developer | Jul 2020 – Jan 2022</p>
-          <ul>
-            <li>Developed features for a slot game with 1M+ downloads.</li>
-            <li>Implemented tutorials and localization support.</li>
-          </ul>
+      <!-- Portfolio Section -->
+      <section id="portfolio" aria-labelledby="portfolio-title">
+        <h2 id="portfolio-title">Portfolio</h2>
+        <div class="card-container">
+          <div class="card">
+            <img
+              src="https://via.placeholder.com/250"
+              alt="Tower Defense Game"
+            />
+            <h3>Tower Defense Game</h3>
+            <p>
+              A strategy game built from scratch with engaging animations and
+              mechanics.
+            </p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/250" alt="Storyboard App" />
+            <h3>Storyboard App</h3>
+            <p>
+              A social network application developed during a coding bootcamp.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section id="skills" tabindex="-1">
-        <h2>Technical Skills</h2>
+      <!-- Experience Section -->
+      <section id="experience" aria-labelledby="experience-title">
+        <h2 id="experience-title">Experience</h2>
         <ul>
-          <li>Programming: C#, Python, Java, C++, JavaScript</li>
-          <li>Game Engines: Unity, Construct 3</li>
-          <li>Design Tools: Affinity Photo, Procreate</li>
-          <li>Video Tools: DaVinci Resolve</li>
+          <li><strong>Unity Developer</strong> at Abzorba Games Mbh</li>
+          <li><strong>Full Stack Developer</strong> at MatchWornShirt</li>
+          <li><strong>Game Developer</strong> at Maggioli Group</li>
         </ul>
       </section>
 
-      <section id="contact" tabindex="-1">
-        <h2>Contact Me</h2>
-        <form aria-label="Contact Form">
-          <label for="name">Name:</label>
+      <!-- Skills Section -->
+      <section id="skills" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills</h2>
+        <div class="card-container">
+          <div class="card">
+            <i class="fas fa-code"></i>
+            <h3>Programming</h3>
+            <p>C#, Python, JavaScript</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-drafting-compass"></i>
+            <h3>Design Tools</h3>
+            <p>Affinity Photo, Procreate</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-gamepad"></i>
+            <h3>Game Development</h3>
+            <p>Unity, Construct 3</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <form id="contact-form">
+          <label for="name">Name</label>
           <input type="text" id="name" name="name" required />
-
-          <label for="email">Email:</label>
+          <label for="email">Email</label>
           <input type="email" id="email" name="email" required />
-
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-
-          <button type="submit">Send</button>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Submit</button>
         </form>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2025 Nikolaos Karamousadakis</p>
+      <p>
+        © 2025 Nikolaos Karamousadakis | Follow me:
+        <a href="https://github.com/Nickeron" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/in/nick-karamousadakis" target="_blank"
+          >LinkedIn</a
+        >
+      </p>
     </footer>
 
     <script src="script.js"></script>
